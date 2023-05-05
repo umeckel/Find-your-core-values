@@ -1,4 +1,4 @@
-name: AppSweep-Test
+name: AppSweep
 
 on:
   push:

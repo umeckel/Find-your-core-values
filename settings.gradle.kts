@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Find-your-core-values"
-include ':app'
+include(":app")

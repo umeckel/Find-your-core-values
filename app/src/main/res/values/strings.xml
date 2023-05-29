@@ -76,4 +76,5 @@
     <string name="wohlwollen">Benevolence</string>
     <string name="zugehoerigkeit">Affiliation</string>
     <string name="zuverlaessigkeit">Reliability</string>
+    <string name="select_values">Select values</string>
 </resources>

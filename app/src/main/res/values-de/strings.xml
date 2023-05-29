@@ -76,4 +76,6 @@
     <string name="wohlwollen">Wohlwollen</string>
     <string name="zugehoerigkeit">Zugehörigkeit</string>
     <string name="zuverlaessigkeit">Zuverlässigkeit</string>
+
+    <string name="select_values">Werteauswahl</string>
 </resources>

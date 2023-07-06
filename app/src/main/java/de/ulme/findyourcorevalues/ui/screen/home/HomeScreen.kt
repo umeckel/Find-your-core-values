@@ -22,12 +22,17 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import de.ulme.findyourcorevalues.R
 import de.ulme.findyourcorevalues.ui.AppViewModelProvider
+import de.ulme.findyourcorevalues.ui.navigation.NavigationDestination
 import de.ulme.findyourcorevalues.ui.navigation.YourValuesTopAppBar
 import de.ulme.findyourcorevalues.ui.theme.FindYourCoreValuesTheme
 
-
+object HomeDestination : NavigationDestination {
+    override val route = "home"
+    override val titleRes = R.string.app_name
+}
 @Composable
 fun HomeScreen(
+    navigateToSelection: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(factory = AppViewModelProvider.Factory),
 ) {
@@ -35,12 +40,13 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             YourValuesTopAppBar(
-                title = stringResource(R.string.app_name),
+                title = stringResource(HomeDestination.titleRes),
             )
         },
     ) { innerPadding ->
         HomeBody(
             resultList = uiState.itemList,
+            navigateToSelection = navigateToSelection,
             modifier = modifier.padding(innerPadding)
         )
     }
@@ -49,11 +55,12 @@ fun HomeScreen(
 @Composable
 fun HomeBody(
     resultList: List<String>,
+    navigateToSelection: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     if (resultList.isEmpty()) {
         IntroductionBody(
-            onStart = { /* TODO */ }
+            onStart = navigateToSelection
         )
     } else {
         Text("Found ${resultList.size} yet")

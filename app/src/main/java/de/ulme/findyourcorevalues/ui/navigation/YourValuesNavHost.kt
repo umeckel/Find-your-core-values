@@ -7,7 +7,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import de.ulme.findyourcorevalues.ui.screen.home.HomeDestination
 import de.ulme.findyourcorevalues.ui.screen.home.HomeScreen
+import de.ulme.findyourcorevalues.ui.screen.valueSelection.ValueSelectionDestination
+import de.ulme.findyourcorevalues.ui.screen.valueSelection.ValueSelectionScreen
 
 @Composable
 fun YourValuesNavHost(
@@ -19,8 +22,14 @@ fun YourValuesNavHost(
         startDestination = "home",
         modifier = modifier
     ) {
-        composable(route = "home") {
-            HomeScreen()
+        composable(route = HomeDestination.route) {
+            HomeScreen(
+                navigateToSelection = {
+                    navController.navigate(ValueSelectionDestination.route) },
+            )
+        }
+        composable(route = ValueSelectionDestination.route) {
+            ValueSelectionScreen()
         }
     }
 }

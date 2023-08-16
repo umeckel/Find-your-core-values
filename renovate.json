@@ -5,7 +5,7 @@
   ],
   "packageRules": [
     {
-      "groupName": "Group compose updates",
+      "groupName": "androidx.compose.ui:*",
       "matchPackagePrefixes": [
         "androidx.compose.ui"
       ]

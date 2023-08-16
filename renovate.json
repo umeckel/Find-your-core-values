@@ -5,10 +5,9 @@
   ],
   "packageRules": [
     {
-      "groupName": "Group UI",
+      "groupName": "group androidx.compose.ui:*",
       "matchPackagePrefixes": [
-        "androidx.compose.ui:",
-        "androidx.compose.material:"
+        "androidx.compose.ui"
       ]
     }
   ]

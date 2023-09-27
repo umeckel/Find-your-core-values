@@ -20,6 +20,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        compileSdkPreview = "UpsideDownCake"
     }
 
     buildTypes {

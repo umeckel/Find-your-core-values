@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: set up JDK

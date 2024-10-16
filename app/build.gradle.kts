@@ -60,12 +60,12 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.8.2")
 
     // compose ui 1.4.3
-    implementation("androidx.compose.ui:ui:1.7.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.3")
+    implementation("androidx.compose.ui:ui:1.7.4")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.4")
     implementation("androidx.compose.material:material:1.7.3")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.3")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.7.3")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.3")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.4")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.7.4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.4")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
